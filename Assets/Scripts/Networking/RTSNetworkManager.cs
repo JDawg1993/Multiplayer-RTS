@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mirror;
@@ -8,6 +9,21 @@ public class RTSNetworkManager : NetworkManager
 {
     [SerializeField] GameObject unitSpawnerPrefab = null;
     [SerializeField] GameOverHandler gameOverHandlerPrefab = null;
+
+    public static event Action ClientOnConnected;
+    public static event Action ClientOnDisonnected;
+
+    public override void OnClientConnect()
+    {
+        base.OnClientConnect();
+        ClientOnConnected?.Invoke();
+    }
+    public override void OnClientDisconnect()
+    {
+        base.OnClientDisconnect();
+        ClientOnDisonnected?.Invoke();
+    }
+
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
         base.OnServerAddPlayer(conn);
@@ -19,11 +35,11 @@ public class RTSNetworkManager : NetworkManager
             UnityEngine.Random.Range(0f, 1f)
         ));
 
-        GameObject unitSpawnerInstance = Instantiate(
-            unitSpawnerPrefab, 
-            conn.identity.transform.position, 
-            conn.identity.transform.rotation);
-        NetworkServer.Spawn(unitSpawnerInstance, conn);
+        // GameObject unitSpawnerInstance = Instantiate(
+        //     unitSpawnerPrefab, 
+        //     conn.identity.transform.position, 
+        //     conn.identity.transform.rotation);
+        // NetworkServer.Spawn(unitSpawnerInstance, conn);
     }
     public override void OnServerSceneChanged(string sceneName)
     {
