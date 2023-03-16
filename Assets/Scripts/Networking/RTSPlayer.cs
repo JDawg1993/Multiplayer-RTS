@@ -13,6 +13,7 @@ public class RTSPlayer : NetworkBehaviour
 
     [SyncVar(hook = nameof(ClientHandleResourcesUpdated))]
     private int resources = 500;
+
     [SyncVar(hook = nameof(AuthorityHandlePartyOwnerStateUpdated))]
     private bool isPartyOwner = false;
 
@@ -172,6 +173,8 @@ public class RTSPlayer : NetworkBehaviour
         myBuildings.Remove(building);
     }
     #endregion
+
+    
     #region Client
     public override void OnStartAuthority()
     {

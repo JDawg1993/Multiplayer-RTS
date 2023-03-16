@@ -13,7 +13,7 @@ public class RTSNetworkManager : NetworkManager
     public static event Action ClientOnConnected;
     public static event Action ClientOnDisonnected;
 
-    public bool isGameInProgress = false;
+    private bool isGameInProgress = false;
 
     public List<RTSPlayer> Players {get;} = new List<RTSPlayer>();
     #region Server

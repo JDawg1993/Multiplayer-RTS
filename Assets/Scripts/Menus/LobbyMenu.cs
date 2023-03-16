@@ -25,6 +25,11 @@ public class LobbyMenu : MonoBehaviour
         startGameButton.gameObject.SetActive(state);
     }
 
+    public void StartGame()
+    {
+        NetworkClient.connection.identity.GetComponent<RTSPlayer>().CmdStartGame();
+    }
+
     private void HandleClientConnected()
     {
         lobbyUI.SetActive(true);
