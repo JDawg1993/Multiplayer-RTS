@@ -24,14 +24,11 @@ public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         mainCamera = Camera.main;
         iconImage.sprite = building.GetIcon();
         priceText.text = building.GetPrice().ToString();
-
+        player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
         buildingCollider = building.GetComponent<BoxCollider>();
     }
-    private void Update() {
-        if(player == null)
-        {
-            player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
-        }
+    private void Update() 
+    {
         if(buildingPreviewInstance == null) {return;}
         UpdateBuildingPreview();
     }
