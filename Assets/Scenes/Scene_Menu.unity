@@ -1112,6 +1112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   landingPagePanel: {fileID: 1854782421}
+  useSteam: 0
 --- !u!1 &400563624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,52 +1971,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4464762093693293612, guid: acfbb2f9b25c23449a7fc61fcf0ed1c9,
         type: 3}
-      propertyPath: onlineScene
-      value: 
+      propertyPath: maxConnections
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 4464762093693293612, guid: acfbb2f9b25c23449a7fc61fcf0ed1c9,
-        type: 3}
-      propertyPath: spawnPrefabs.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464762093693293612, guid: acfbb2f9b25c23449a7fc61fcf0ed1c9,
-        type: 3}
-      propertyPath: spawnPrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 942992082424554676, guid: 5e6b29af7e33504488f8af7790777fee,
-        type: 3}
-    - target: {fileID: 4464762093693293612, guid: acfbb2f9b25c23449a7fc61fcf0ed1c9,
-        type: 3}
-      propertyPath: spawnPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 788040284293326053, guid: 40cb608fb52746f459f6f506ce414185,
-        type: 3}
-    - target: {fileID: 4464762093693293612, guid: acfbb2f9b25c23449a7fc61fcf0ed1c9,
-        type: 3}
-      propertyPath: spawnPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 942992082424554676, guid: 5f776a1de29c4b747a564d2f40d5914e,
-        type: 3}
-    - target: {fileID: 4464762093693293612, guid: acfbb2f9b25c23449a7fc61fcf0ed1c9,
-        type: 3}
-      propertyPath: spawnPrefabs.Array.data[3]
-      value: 
-      objectReference: {fileID: 16181454522955626, guid: cb12286d6fb4b0d4db42a1017bdc1880,
-        type: 3}
-    - target: {fileID: 4464762093693293612, guid: acfbb2f9b25c23449a7fc61fcf0ed1c9,
-        type: 3}
-      propertyPath: spawnPrefabs.Array.data[4]
-      value: 
-      objectReference: {fileID: 3336214544687365910, guid: d0b021bdaf1090f4685c753d0359afe3,
-        type: 3}
-    - target: {fileID: 4464762093693293612, guid: acfbb2f9b25c23449a7fc61fcf0ed1c9,
-        type: 3}
-      propertyPath: spawnPrefabs.Array.data[5]
-      value: 
-      objectReference: {fileID: 6826551802176242373, guid: a105c77a426ccb54a84125e191bd9422,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acfbb2f9b25c23449a7fc61fcf0ed1c9, type: 3}
+--- !u!1 &947647531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4464762093693293607, guid: acfbb2f9b25c23449a7fc61fcf0ed1c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 947647530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &947647538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947647531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021c925c0a7083446a2bfb44f8c872ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &997829582
 GameObject:
   m_ObjectHideFlags: 0

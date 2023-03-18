@@ -218,6 +218,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 3927187607952557044, guid: a678a0ef0b662074f978c955a003f3e3,
+        type: 3}
+      propertyPath: chaseRange
+      value: 7.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4494482487140986411, guid: a678a0ef0b662074f978c955a003f3e3,
         type: 3}
       propertyPath: colorRenderers.Array.data[0]
